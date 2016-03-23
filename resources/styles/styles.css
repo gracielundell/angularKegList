@@ -1,0 +1,26 @@
+h1 {
+  color: blue;
+}
+
+.selected {
+  color: #22bdf0;
+  transition: all .3s linear;
+}
+.selected .animatedSelected {
+  transition: all .8s linear;
+  transform: rotate(360deg) scale(1.2) translateX(14%) translateY(300px);
+}
+
+.task-form {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.add-button {
+  margin: 10px auto;
+  padding: 8px auto;
+}
+
+.filter {
+  margin: 20px auto;
+}
