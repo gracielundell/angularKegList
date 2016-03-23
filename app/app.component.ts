@@ -55,7 +55,7 @@ import { Keg } from './keg.model';
   // this loops through and prints tasks to page inside html selector ^
   template: `
   <div class='container'>
-    <h1>KEEEEEEGGGGSSSSSS</h1>
+    <h1>Kegs</h1>
       <keg-list
         [kegList]="kegs"
         (onKegSelect)="kegWasSelected($event)">
