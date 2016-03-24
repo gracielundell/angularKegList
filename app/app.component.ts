@@ -54,7 +54,7 @@ import { Keg } from './keg.model';
   directives: [KegListComponent],
   // this loops through and prints tasks to page inside html selector ^
   template: `
-  <div class='container'>
+  <div>
     <h1>Kegs</h1>
       <keg-list
         [kegList]="kegs"
@@ -68,7 +68,7 @@ export class AppComponent {
   constructor(){
     this.kegs = [
       new Keg("coors", "beer", "2", "4")
-      
+
     ];
   }
   kegWasSelected(clickedKeg: Keg): void {

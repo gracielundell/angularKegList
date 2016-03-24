@@ -6,12 +6,12 @@ import { NewKegComponent } from './new-keg.component';
   selector: 'edit-keg-details',
   inputs: ['keg'],
   template: `
-  <div class="keg-form">
+  <div class="edit-keg-form">
     <h3>Edit Description:</h3>
-    <input [(ngModel)]="keg.name" class="col-sm-8 input-lg keg-form"/>
-    <input [(ngModel)]="keg.brand" class="col-sm-8 input-lg keg-form"/>
-    <input [(ngModel)]="keg.price" class="col-sm-8 input-lg keg-form"/>
-    <input [(ngModel)]="keg.alcoholContent" class="col-sm-8 input-lg keg-form"/>
+    <input [(ngModel)]="keg.name" class="keg-edit input-lg"/>
+    <input [(ngModel)]="keg.brand" class="keg-edit input-lg"/>
+    <input [(ngModel)]="keg.price" class="keg-edit input-lg"/>
+    <input [(ngModel)]="keg.alcoholContent" class="keg-edit input-lg"/>
 
   </div>
   `

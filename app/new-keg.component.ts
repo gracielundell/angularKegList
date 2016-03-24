@@ -5,7 +5,7 @@ import {Keg} from './keg.model';
   selector: 'new-keg',
   outputs: ['onSubmitNewKeg'],
   template: `
-  <div class="keg-form">
+  <div class="new-keg-form">
     <h3>Create Keg:</h3>
     <input placeholder="Keg Description" class="col-sm-8 input-lg" #newName>
     <input placeholder="Keg Brand" class="col-sm-8 input-lg" #newBrand>
