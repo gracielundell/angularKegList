@@ -8,7 +8,7 @@ import { Keg } from './keg.model';
   // toggles which list is shown, done or not done but both technically present
   template: `
   <div class="animateSelected">
-  <label>{{ keg.name }} <br> {{ keg.brand }} <br><span class="price"> {{ keg.price }} </span><br> {{ keg.alcoholContent }} <br><br> pints left: {{ keg.pintsLeft }}</label>
+  <label>{{ keg.name }} <br> {{ keg.brand }} <br><span [class.lowprice]="keg.price < 5" [class.highprice]="keg.price > 5"> $ {{ keg.price }} </span><br> {{ keg.alcoholContent }} % <br><br> pints left: {{ keg.pintsLeft }}</label>
   <button (click)="pintsLeft()">Pour a Pint</button>
 </div>
   `

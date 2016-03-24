@@ -67,7 +67,7 @@ export class AppComponent {
   public kegs: Keg[];  // Keg[] (or Array<Keg>) identifies kegs as an array of Keg objects
   constructor(){
     this.kegs = [
-      new Keg("coors", "beer", "$2", "4%")
+      new Keg("coors", "beer", 2, 4)
 
     ];
   }

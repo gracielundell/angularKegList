@@ -9,7 +9,7 @@ import {Keg} from './keg.model';
     <h3>Create Keg:</h3>
     <input placeholder="Keg Description" class="col-sm-8 input-lg" #newName>
     <input placeholder="Keg Brand" class="col-sm-8 input-lg" #newBrand>
-    <input placeholder="Pint Price" class="col-sm-8 input-lg" #newPrice>
+    <input placeholder="Pint Price" class="col-sm-8 input-lg" #newPrice >
     <input placeholder="Alcohol Content" class="col-sm-8 input-lg" #newAlcoholContent>
     <button (click)="addKeg(newName, newBrand, newPrice, newAlcoholContent)" class="btn-success btn-lg add-button">Add</button>
   </div>
@@ -23,7 +23,7 @@ export class NewKegComponent {
     }
     // takes in user input, which is seen as an html element
     addKeg(newName: HTMLInputElement, newBrand: HTMLInputElement, newPrice: HTMLInputElement, newAlcoholContent: HTMLInputElement) {
-      var newKeg = new Keg(newName.value, newBrand.value, "$" + newPrice.value, newAlcoholContent.value + "%");
+      var newKeg = new Keg(newName.value, newBrand.value, parseInt(newPrice.value), parseInt(newAlcoholContent.value));
       this.onSubmitNewKeg.emit(newKeg);
       newName.value = "";
       newBrand.value = "";
