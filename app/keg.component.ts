@@ -10,7 +10,7 @@ import { Keg } from './keg.model';
   <div class="animateSelected">
   <input *ngIf="keg.done" type="checkbox" checked (click)="toggleDone(false)"/>
   <input *ngIf="!keg.done" type="checkbox" (click)="toggleDone(true)"/>
-  <label>{{ keg.description }}</label>
+  <label>{{ keg.name }}</label>
 </div>
   `
 })

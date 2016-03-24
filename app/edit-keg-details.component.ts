@@ -8,7 +8,11 @@ import { NewKegComponent } from './new-keg.component';
   template: `
   <div class="keg-form">
     <h3>Edit Description:</h3>
-    <input [(ngModel)]="keg.description" class="col-sm-8 input-lg keg-form"/>
+    <input [(ngModel)]="keg.name" class="col-sm-8 input-lg keg-form"/>
+    <input [(ngModel)]="keg.brand" class="col-sm-8 input-lg keg-form"/>
+    <input [(ngModel)]="keg.price" class="col-sm-8 input-lg keg-form"/>
+    <input [(ngModel)]="keg.alcoholContent" class="col-sm-8 input-lg keg-form"/>
+
   </div>
   `
 })

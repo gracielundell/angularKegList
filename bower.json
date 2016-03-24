@@ -4,7 +4,7 @@
   "main": "",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/gracielundell/angularKegList",
   "ignore": [
     "**/.*",
     "node_modules",

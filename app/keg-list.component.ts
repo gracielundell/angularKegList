@@ -18,7 +18,7 @@ import {DonePipe} from './done.pipe';
     <option value="done">Show Done</option>
     <option value="notDone" selected="selected">Show Not Done</option>
   </select>
-  <keg-display *ngFor="#currentKeg of kegList | done:filterDone:selectedKeg"
+  <keg-display *ngFor="#currentKeg of kegList | done:filterDone"
     (click)="kegClicked(currentKeg)"
     [class.selected]="currentKeg === selectedKeg"
     [keg]="currentKeg">
@@ -45,11 +45,12 @@ export class KegListComponent {
     this.selectedKeg = clickedKeg;
     this.onKegSelect.emit(clickedKeg);
   }
-  createKeg(description: string): void {
+  createKeg(newKeg: Keg): void {
+    // new keg of the Keg type
+    console.log(newKeg);
     // push new keg into keg-list array, keep track of its index number(assign it to this keg)
-    this.kegList.push(
-      new Keg(description, this.kegList.length)
-    );
+    this.kegList.push(newKeg);
+    // push new instance of Keg this instance of a keg)
   }
   onChange(filterOption) {
     this.filterDone = filterOption;

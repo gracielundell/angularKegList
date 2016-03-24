@@ -66,7 +66,10 @@ import { Keg } from './keg.model';
 export class AppComponent {
   public kegs: Keg[];  // Keg[] (or Array<Keg>) identifies kegs as an array of Keg objects
   constructor(){
-    this.kegs = [];
+    this.kegs = [
+      new Keg("coors", "beer", "2", "4")
+      
+    ];
   }
   kegWasSelected(clickedKeg: Keg): void {
     console.log('parent', clickedKeg);
