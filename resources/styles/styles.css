@@ -54,6 +54,7 @@ body {
   border: 2px solid tomato;
   width: 100%;
   padding: 20px;
+  margin: 5px;
 }
 
 .price {
