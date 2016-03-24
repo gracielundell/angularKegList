@@ -35,7 +35,7 @@ body {
 }
 .new-keg-form input {
   margin: 5px;
-  width: 100%;
+  width: 90%;
 }
 
 .edit-keg-form {
@@ -47,4 +47,15 @@ body {
 .edit-keg-form input {
   margin: 5px;
   width: 100%;
+}
+
+.animateSelected {
+  font-size: 25px;
+  border: 2px solid tomato;
+  width: 100%;
+  padding: 20px;
+}
+
+.price {
+  color: green;
 }

@@ -12,7 +12,6 @@ import { NewKegComponent } from './new-keg.component';
     <input [(ngModel)]="keg.brand" class="keg-edit input-lg"/>
     <input [(ngModel)]="keg.price" class="keg-edit input-lg"/>
     <input [(ngModel)]="keg.alcoholContent" class="keg-edit input-lg"/>
-
   </div>
   `
 })

@@ -15,7 +15,7 @@ import {DonePipe} from './done.pipe';
   template: `
   <select (change)="onChange($event.target.value)" class="filter">
     <option value="all">Show All</option>
-    <option value="done">Show Done</option>
+    <option value="done">Show Empty(Done)</option>
     <option value="notDone" selected="selected">Show Not Done</option>
   </select>
   <keg-display *ngFor="#currentKeg of kegList | done:filterDone"
@@ -47,7 +47,6 @@ export class KegListComponent {
   }
   createKeg(newKeg: Keg): void {
     // new keg of the Keg type
-    console.log(newKeg);
     // push new keg into keg-list array, keep track of its index number(assign it to this keg)
     this.kegList.push(newKeg);
     // push new instance of Keg this instance of a keg)
@@ -55,4 +54,5 @@ export class KegListComponent {
   onChange(filterOption) {
     this.filterDone = filterOption;
   }
+  
 }

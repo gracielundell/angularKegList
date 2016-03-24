@@ -10,7 +10,8 @@ import { Keg } from './keg.model';
   <div class="animateSelected">
   <input *ngIf="keg.done" type="checkbox" checked (click)="toggleDone(false)"/>
   <input *ngIf="!keg.done" type="checkbox" (click)="toggleDone(true)"/>
-  <label>{{ keg.name }}</label>
+  <label>{{ keg.name }} <br> {{ keg.brand }} <br><span class="price"> {{ keg.price }} </span><br> {{ keg.alcoholContent }} <br><br> pints left: {{ keg.pintsLeft }}</label>
+  <button (click)="pintsLeft()">Pour a Pint</button>
 </div>
   `
 })
@@ -19,5 +20,8 @@ export class KegComponent {
   // sets state of bool to show which is toggled
   toggleDone(setState: boolean){
     this.keg.done = setState;
+  }
+  pintsLeft() {
+    this.keg.pintsLeft = this.keg.pintsLeft -1;
   }
 }

@@ -23,7 +23,7 @@ export class NewKegComponent {
     }
     // takes in user input, which is seen as an html element
     addKeg(newName: HTMLInputElement, newBrand: HTMLInputElement, newPrice: HTMLInputElement, newAlcoholContent: HTMLInputElement) {
-      var newKeg = new Keg(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value);
+      var newKeg = new Keg(newName.value, newBrand.value, "$" + newPrice.value, newAlcoholContent.value + "%");
       this.onSubmitNewKeg.emit(newKeg);
       newName.value = "";
       newBrand.value = "";
