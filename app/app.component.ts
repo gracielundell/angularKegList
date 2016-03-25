@@ -5,49 +5,6 @@ import { KegListComponent } from './keg-list.component';
 import { Keg } from './keg.model';
 // allows for communication into the definition of Task
 
-// /////////////// GRANDCHILD of parent; child of child /////////////////
-// @Component({
-//   selector: 'task-display',
-//   inputs: ['task'],
-//   template: `
-//     <h3>{{ task.description }}</h3>
-//   `
-// })
-// export class TaskComponent {
-//   public task: Task;
-// }
-
-// ////////////// CHILD COMPONENT //////////////////////
-// @Component({
-//   selector: 'task-list',
-//   input: ['taskList'],
-//   outputs: ['onTaskSelect'],
-//   directives: [TaskComponent],
-//   template: `
-//   <task-display *ngFor="#currentTask of taskList"
-//     (click)="taskClicked(currentTask)"
-//     [class.selected]="currentTask === selectedTask"
-//     [task]="currentTask">
-//   </task-display>
-//   `
-//   // add .selected class to task coming from parent that is simultaneously the selected and current task
-// })
-// export class TaskListComponent {
-//   public taskList: Task[];
-//   public onTaskSelect: EventEmitter<Task>;
-//   public selectedTask: Task;
-//   constructor() {
-//     // instantiate the Event Emitter object in the child component constructor. holds the EventEmitter object for output
-//     this.onTaskSelect = new EventEmitter();
-//   }
-//   taskClicked(clickedTask: Task): void {
-//     console.log("child", clickedTask);
-//     // wraps all this info up to be sent into the html selector now that it has been selected
-//     this.selectedTask = clickedTask;
-//     this.onTaskSelect.emit(clickedTask);
-//   }
-// }
-
 // parent component (root component)
 @Component({
   selector: 'my-app',
@@ -75,10 +32,3 @@ export class AppComponent {
     console.log('parent', clickedKeg);
   }
 }
-// read from keg.model
-// export class Keg {
-//   public done: boolean = false;
-//   constructor(public description: string, public id: number) {
-//
-//   }
-// }

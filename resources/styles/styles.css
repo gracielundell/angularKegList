@@ -3,12 +3,8 @@ h1 {
 }
 
 .selected {
-  color: #22bdf0;
+  color: tomato;
   transition: all .3s linear;
-}
-.selected .animatedSelected {
-  transition: all .8s linear;
-  transform: rotate(360deg) scale(1.2) translateX(14%) translateY(300px);
 }
 
 .task-form {
@@ -63,4 +59,8 @@ body {
 
 .highprice {
   color: #22bdf0;;
+}
+
+keg-display {
+  color: lime;
 }

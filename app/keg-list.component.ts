@@ -1,7 +1,6 @@
 import { Component, EventEmitter } from 'angular2/core';
 import { KegComponent } from './keg.component';
 import { Keg } from './keg.model';
-import { EditKegDetailsComponent } from './edit-keg-details.component';
 import { NewKegComponent } from './new-keg.component';
 import {DonePipe} from './done.pipe';
 
@@ -11,20 +10,20 @@ import {DonePipe} from './done.pipe';
   inputs: ['kegList'],
   outputs: ['onKegSelect'],
   pipes: [DonePipe],
-  directives: [KegComponent, EditKegDetailsComponent, NewKegComponent],
+  directives: [KegComponent, NewKegComponent],
   template: `
   <select (change)="onChange($event.target.value)" class="filter">
     <option value="all">Show All</option>
     <option value="done">Show Empty(Done)</option>
     <option value="notDone" selected="selected">Show Not Done</option>
   </select>
+
   <keg-display *ngFor="#currentKeg of kegList | done:filterDone"
     (click)="kegClicked(currentKeg)"
     [class.selected]="currentKeg === selectedKeg"
-    [keg]="currentKeg">
+    [keg]="currentKeg" [isSelected]="currentKeg === selectedKeg">
   </keg-display>
-  <edit-keg-details *ngIf="selectedKeg" [keg]="selectedKeg">
-  </edit-keg-details>
+
   <new-keg (onSubmitNewKeg)="createKeg($event)"></new-keg>
   `
   // done:filterDone:selectedKeg refers to the done.pipe, calls its functionality
@@ -54,5 +53,4 @@ export class KegListComponent {
   onChange(filterOption) {
     this.filterDone = filterOption;
   }
-  
 }
