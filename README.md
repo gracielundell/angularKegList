@@ -8,7 +8,7 @@ An app to help a bar track their keg inventory, utilizing to-do list-like functi
 
 ##Setup
 Clone [this](https://github.com/gracielundell/epicodus-js-w2-code-review.git) repository.
-Then run <code>$ npm install -g</code> and <code>$ npm install bower -g</code> to install those dependencies globally. Run <code>$ npm init</code> and <code>$ bower init</code> to initiate. To build the server the app uses, run <code>$ gulp build</code> and <code>$ gulp serve</code>
+Then run <code>$ npm install</code> and <code>$ bower install</code> to install those dependencies. To build the server the app uses, run <code>$ gulp build</code> and <code>$ gulp serve</code>
 
 ##Technologies
 - Angular 2.0
